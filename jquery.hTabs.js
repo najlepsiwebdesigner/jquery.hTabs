@@ -2,6 +2,9 @@
  * jQuery plugin  
  * 
  * Description: Simpe plugin to transform element to tabs GUI element,
+ * <h2>blah</h2> elements are considered tab starts, 
+ * anything after it until next <h2>uff</h2> 
+ * will be content of "blah" tab. Anything after "uff" header will be content of "uff" tab.:D
  * 
  * Version: 0.4
  *
