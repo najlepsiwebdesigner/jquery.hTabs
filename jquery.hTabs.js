@@ -3,37 +3,52 @@
  * 
  * Description: Simpe plugin to transform element to tabs GUI element,
  * 
- * Version: 0.2 alpha
+ * Version: 0.4
  *
- * Author: Peter Beno
+ * Author: Peter Beno, najlepsiwebdesigner@gmail.com
  *
  * Revisions: 
- *	
+ *
+ * TODO: Param to set element name instead of just 'h2' constant
  * 
  * References:	FREE FOR ANYTHING
  *
+ * EXAMPLE:
+ *	code:
+ 	<div class="simpleTabs">
+ 		<h2>contact</h2>
+ 			<p>some contact</p>
+ 			<img ../>
+ 		<h2>about</h2>
+ 			<div>blah</div>
+ 	</div>
+ 	<script>
+ 		
+ 	renders as:
+ 		__________________
+ 	       | contact | about |
+ 	|	some contact                 |
+ *
  */
 (function($) {
-
-	// replace 'simpleTabs' with the name of your plugin
     $.fn.hTabs = function(options) {
-		// plugin default options
+	// plugin default options
         var opts = {
-					activeTabClass	:	'activetab',
-					hoverTabClass	:	'hovertab',
-					initialTab : 1,
-					displayHeadings : false,
-					evtType : 'click'			
+		activeTabClass	:	'activetab',
+		hoverTabClass	:	'hovertab',
+		initialTab : 1,
+		displayHeadings : false,
+		evtType : 'click'			
         };
 
-		// extends defaults with options provided
-    if (options) {
-			$.extend(opts, options);
-		}
+    	// extends defaults with options provided
+	if (options) {
+		$.extend(opts, options);
+	}
 
-		// iterate over matched elements
+	// iterate over matched elements
         return this.each(function() {
-					_init($(this), opts);
+		_init($(this), opts);
         });
 
     };
@@ -73,13 +88,7 @@
 		}
 			             
 		// ostranim prazdne elementy, aby mi nerobili neplechu
-		$('.tab').each(function($key) {
-			if ($(this).text().length == 0) {
-				$(this).remove();
-			}
-		});
-		// ostranim prazdne elementy, aby mi nerobili neplechu
-		$('.tabsHeading').each(function($key) {
+		$('.tab, .tabsHeading').each(function($key) { // not tested selectors
 			if ($(this).text().length == 0) {
 				$(this).remove();
 			}
