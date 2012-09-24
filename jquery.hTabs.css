@@ -1,0 +1,35 @@
+.tabsHeading{
+    	list-style-type: none;
+    	margin:0px;
+    	padding:0px;
+    }
+.tabsHeading li {
+	display:block;
+	margin:0px;
+	padding:5px 10px;
+	margin-right:5px;
+	float:left;
+	border:1px solid #ccc;
+	cursor:pointer;
+	position:relative;
+	top:+1px;
+}
+.tabsHeading li:hover {
+	background:#ccc;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #fff, #ccc);
+}
+.tabsHeading li.active {
+	background-color: #ccc;
+	color:#000;
+}
+h2 {
+	clear:both;
+}
+.tab {
+	clear:both;
+	padding:5px;
+ 	padding-top:8px; 
+ 	padding-left:0px;
+	border-top:1px solid #ccc;
+}
