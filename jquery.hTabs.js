@@ -38,7 +38,8 @@
 		hoverTabClass	:	'hovertab',
 		initialTab : 1,
 		displayHeadings : false,
-		evtType : 'click'			
+		evtType : 'click'
+		element
         };
 
     	// extends defaults with options provided
